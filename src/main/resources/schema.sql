@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS FILM;
+DROP TABLE IF EXISTS ACTEUR;
+DROP TABLE IF EXISTS FILM_ACTEURS;
+ 
+CREATE TABLE FILM (
+  id            INT AUTO_INCREMENT  PRIMARY KEY,
+  titre         VARCHAR(100)        NOT NULL,
+  description   VARCHAR(250)        NOT NULL
+);
+
+CREATE TABLE ACTEUR (
+ id             INT AUTO_INCREMENT  PRIMARY KEY,
+ nom            VARCHAR(100)        NOT NULL,
+ prenom         VARCHAR(250)        NOT NULL
+);
+
+CREATE TABLE FILM_ACTEURS (
+  film_id       INT,
+  acteurs_id    INT
+);
